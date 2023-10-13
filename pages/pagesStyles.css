@@ -1,0 +1,150 @@
+:root {
+    --primary: #155bd5;
+    --primary-D: #1c3ab6;
+    --primary-light: #e2f1ff;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+    overflow-y: hidden;
+}
+body{
+    background: var(--primary);
+
+}
+.selectCor{
+    margin: 0 auto;
+    padding: 1rem;
+    display: flex;
+    background-color: none;
+}
+#selectCor{
+    height: 100vh;
+}
+.corContainer{
+    background-color: #fff;
+    border: none;
+    border-radius: 1.5rem;
+    padding: 1rem;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    width: 75%;
+    height: fit-content;
+}
+.corContainer h2{
+    font-size: 2.8rem;
+    text-align: center;
+    padding: 1rem;
+    margin: 1rem auto;
+}
+.corContContent{
+    width: fit-content;
+    height: fit-content;
+    background-color: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: auto;
+    justify-content: space-around;
+    margin: 0 auto;
+    padding: 1rem;
+}
+.corContContent .corCard{
+    padding: 1rem;
+    border-radius: 1rem;
+    display: flex;
+    align-items: center;
+    transition: .3s ease-in-out;
+    width: fit-content;
+}
+.corContContent .corCard img{
+    width: 50%;
+    margin: 0 auto;
+    height: auto;
+    transition: .3s ease-in-out;
+}
+.corLink:hover .corCard img{
+    transform: scale(1.1);
+}
+/*
+.corLink:hover .sas{
+    background-color: #1c3ab6;
+}
+.corLink:hover .bernoulli{
+    background-color: #11e2cd;
+}
+.corLink:hover .poliedro{
+    background-color: #e5c50c;
+}
+.corLink:hover .somos{
+    background-color: #d81192;
+}
+.corLink:hover .enem{
+    background-color: #0bf869;
+}*/
+/*área de selecionar a edição do simulado e o dia*/
+#selectEdition{
+    height: 100vh;
+    width: 100%;
+    background-color: var(--primary);
+    display: flex;
+    flex-direction: column;
+}
+.corContainerSelect{
+    height: 75%;
+    width: 80%;
+    background: #ffff;
+    border: none;
+    border-radius: 1.5rem;
+    padding: 1rem;
+    margin:  auto;
+    display: flex;
+    flex-direction: column;
+}
+.corContainerSelect .corConTitle{
+    font-size: 2.8rem;
+    text-align: center;
+    padding: 1rem;
+    margin: 1rem auto;
+}
+.corContContentSelect{
+    background-color: none;
+    padding: 2rem;
+    display: flex;
+    height: fit-content;
+}
+.select{
+    background-color: none;
+    border-radius: 2rem;
+    width: 100%;
+    height: 100%;
+    padding: 1rem;
+    display: flex;
+    justify-content: space-around;
+    margin: auto;
+    transition: .3s ease;
+}
+.select select{
+    padding: 1rem;
+    border-radius: 1rem;
+    width: 45%;
+    height: fit-content;
+}
+.corContainerSelect a{
+    color: #ffffff;
+    display: flex;
+    text-decoration: none;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    font-size: 1rem;
+    padding: 1rem auto;
+    background-color: var(--primary);
+    z-index: 100;
+    height: 4rem;
+    width: 12rem;
+    border-radius: 1.5rem;
+    margin: 2rem auto;
+}

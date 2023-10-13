@@ -1,0 +1,170 @@
+:root {
+    --primary: #155bd5;
+    --primary-D: #1c3ab6;
+    --primary-light: #e2f1ff;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+    
+}
+body {
+    overflow: hidden;
+}
+/*estilização da área de inserir os dados do simulado*/
+.inputResponses{
+    background: var(--primary);
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+}
+.inputRespSimuContainer{
+    width: 75%;
+    height: 75%;
+    display: flex;
+    flex-direction: column;
+    padding: 2rem 2%;
+    background: #fff;
+    border: none;
+    border-radius: 1rem;
+    margin: auto;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+.respTitle{
+    font-size: 2rem;
+    text-align: center;
+    text-decoration: none;
+    color: #155bd5;
+    margin: 1.5rem auto;
+}
+.inputSimResoponses{
+    background: #fff;
+    border-radius: 2rem;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 1rem;
+    justify-content: space-around;
+    
+}
+.gabSimu{
+    background: #02ae47;
+    padding: 1rem;
+    display: inline-block;
+    border-radius: 1rem;
+    transition: .3s ease;
+}
+.gabUser{
+    background: royalblue;
+    padding: 1rem;
+    display: inline-block;
+    border-radius: 1rem;
+    transition: .3s ease;
+}
+.inputSpace label{
+    margin: 1rem auto;
+    color:#00163c
+}
+.inputSpace input{
+    padding: .5rem;
+    width: 100%;
+    border: none;
+    border-radius: .5rem;
+    outline: none;
+}
+.correction{
+    color: #ffffff;
+    display: flex;
+    text-decoration: none;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    font-size: 1rem;
+    padding: 1rem auto;
+    background-color: var(--primary);
+    z-index: 100;
+    height: 3rem;
+    width: 12rem;
+    border-radius: 1.5rem;
+    margin: auto;
+    transition: .3s ease-in-out;
+}
+.correction:hover{
+    background-color: #1c3ab6;
+}
+
+/*estilização da área onde aparecerão as resultao*/
+.result{
+    background: #155bd5;
+    min-height: 100vh;
+    width: 100vw;
+    display: flex;
+    
+}
+.resultContainer{
+    width: 75%;
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+    padding: 1rem 2%;
+    background: #fff;
+    border: none;
+    border-radius: 1rem;
+    margin: auto;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+.titleResult{
+    font-size: 2rem;
+    text-align: center;
+    text-decoration: none;
+    color: #155bd5;
+    margin: 1.5rem auto;
+}
+.seeResult{
+    background-color: none;
+    border-radius: 2rem;
+    width: 100%;
+    height: 75%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin: auto;
+}
+.seeResult .seeTotalResult{
+    width: 45%;
+    background: none;
+}
+.seeResult .estatistics{
+    width: 45%;
+    background: none;
+}
+.seeResult .resultCor,
+.seeResult .totalErr,
+.seeResult .resultRend,
+.estatistics h4{
+    background: #e2f1ff;
+    width: 100%;
+    height: fit-content;
+    padding: 1rem;
+    border-radius: 1rem;
+    margin: 1rem auto;
+}
+.btnConcluse{
+    color: #ffffff;
+    display: flex;
+    text-decoration: none;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    font-size: 1rem;
+    padding: 1rem auto;
+    background-color: var(--primary);
+    z-index: 100;
+    height: 3rem;
+    width: 12rem;
+    border-radius: 1.5rem;
+    margin: auto;
+    margin-top: 1rem;
+    transition: .3s ease-in-out;
+}

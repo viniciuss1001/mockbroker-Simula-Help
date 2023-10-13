@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="ptbr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simula Help</title>
+    <link rel="stylesheet" href="RespostsAndGab.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <section class="inputResponses" id="inputResponses">
+        <!--seção para colocar o gabarito oficial do simulado-->
+        <div class="inputRespSimuContainer">
+            <h2 class="respTitle">
+                Boa pedida! Vamos corrigir sua prova?
+            </h2>
+            <h3>Por favor insira os dados das questões abaixo</h3>
+            <div class="inputSimResoponses" id="inputSimResoponses">
+                <div class="gabSimu">
+                    <h4>Gabrito do Simulado</h4>
+                    <p id="contNumberQuest">Questão 1</p>
+                    <div class="respContent">
+                        <div class="inputSpace ">
+                            <label for="text">Resposta</label>
+                            <input class="simu" type="text" id="questionResp" placeholder="Resposta do simulado">
+                        </div>
+                        <div class="inputSpace ">
+                            <label for="">Habilidade</label>
+                            <input class="simu" type="number" name="" id="" placeholder="Habilidade da questão">
+                        </div>
+                        <div class="inputSpace ">
+                            <label for="">Competência</label>
+                            <input class="simu" type="number" name="" id="" placeholder="Competência da questão">
+                        </div>
+                    </div>
+                </div>
+                <div class="gabUser">
+                    <h4>Suas respostas para o simulado</h4>
+                    <div class="inputSpace ">
+                        <label for="">Questão</label>
+                        <input class="user" type="number" placeholder="Número da questão">
+                    </div>
+                    <div class="inputSpace ">
+                        <label for="">Resposta</label>
+                        <input class="user" type="text" placeholder="Resposta da questão">
+                    </div>
+                </div>
+
+            </div>
+            <a href="#result" class="correction" id="correction">Corrigir</a>
+        </div>
+    </section>
+    <section class="result" id="result">
+        <div class="resultContainer" id="resultContainer">
+            <h2 class="titleResult" id="titleResult">Veja abaixo seu resultado</h2>
+            <div class="seeResult" id="seeResult">
+                <div class="seeTotalResult">
+                    <div class="resultCor" style="background: #5EE0B6;">
+                        <h4 class="totalCorrect" id="totalCorrect">Total de acertos</h4>
+                        <i class="fa-solid fa-check"></i>
+                    </div>
+                    <div class="totalErr" id="totalErr " style="background: #E0225E;">
+                        <h4 class="totalError" id="totalError" >Total de erros</h4>
+                        <i class="fa-solid fa-x"></i>
+                    </div>
+                    <div class="resultRend" id="resultRend" style="background: #6AC4DE;">
+                        <h3 class="totalUtil" id="totalUtil" >
+                            Seu aproveitamento
+                        </h3>
+                    </div>
+                </div>
+                <div class="estatistics" id="estatistics">
+                    <h4 class="compMoreAc" id="compMoreAc">Competências mais acertadas</h4>
+                    <h4 class="habiMoreAc" id="habiMoreAc">Habildiades mais acertadas</h4>
+                    <h4 class="compMoreErr" id="compMoreErr">Competências mais erradas</h4>
+                    <h4 class="habiMoreErr" id="habiMoreErr">Habilidades mais erradas</h4>
+                    <h4>Conteúdo mais acertado</h4>
+                    <h4>Conteúdo mais errado</h4>
+                </div>
+            </div>
+            <a href="../index.html" class="btnConcluse">Concluído</a>
+        </div>
+    </section>
+    <script src="../js/index.js"></script>
+</body>
+</html>
