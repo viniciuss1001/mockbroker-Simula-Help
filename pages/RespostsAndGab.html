@@ -65,19 +65,19 @@
         <h2 class="corConTitle">Selecione a edição do simulado</h2> 
             <div class="corContContentSelect" id="corContContentSelect">
                 <div class="select">
-                    <select name="simuEdition" id="" class="simuEdition">
-                        <option value="">Selecione a edição</option>
-                        <option value="">1ª Edição</option>
-                        <option value="">2ª Edição</option>
-                        <option value="">3ª Edição</option>
-                        <option value="">4ª Edição</option>
-                        <option value="">5ª Edição</option>
-                        <option value="">6ª Edição</option>
+                    <select name="simuEdition" id="simuEdition" class="simuEdition">
+                        <option value="selecionar">Selecione a edição</option>
+                        <option value="1edit">1ª Edição</option>
+                        <option value="2edit">2ª Edição</option>
+                        <option value="3edit">3ª Edição</option>
+                        <option value="4edit">4ª Edição</option>
+                        <option value="5edit">5ª Edição</option>
+                        <option value="6edit">6ª Edição</option>
                     </select>
-                    <select name="daySelection" id="" class="daySelection">
-                        <option value="">Selecione o dia</option>
-                        <option value="">1º Dia</option>
-                        <option value="">2° Dia</option>
+                    <select name="daySelection" id="simuDay" class="daySelection">
+                        <option value="selecioneODia">Selecione o dia</option>
+                        <option value="1dia">1º Dia</option>
+                        <option value="2dia">2° Dia</option>
                     </select>
                 </div>
             </div>
@@ -103,15 +103,17 @@
                     <div class="respContent">
                         <div class="inputSpace ">
                             <label for="text">Resposta</label>
-                            <input class="simu" type="text" id="questionResp" placeholder="Resposta do simulado">
+                            <input class="simu" type="text" id="questionResp" placeholder="Resposta do simulado" onke>
                         </div>
                         <div class="inputSpace ">
                             <label for="">Habilidade</label>
-                            <input class="simu" type="number" name="" id="" placeholder="Habilidade da questão">
+                            <input class="simu" type="number" name="" id="hQuestion" placeholder="Habilidade da questão">
                         </div>
                         <div class="inputSpace ">
                             <label for="">Competência</label>
-                            <input class="simu" type="number" name="" id="" placeholder="Competência da questão">
+                            <input class="simu" type="number" name="" id="qComp" placeholder="Competência da questão">
+
+                            <button onclick="sendResp()">Enviar Resposta</button>
                         </div>
                     </div>
                 </div>
@@ -124,6 +126,8 @@
                     <div class="inputSpace ">
                         <label for="">Resposta</label>
                         <input class="user" type="text" placeholder="Resposta da questão">
+
+                        <button onclick="sendUserResp()"></button>
                     </div>
                 </div>
 

@@ -21,7 +21,7 @@ i:hover{
     color: var(--primary-D);
 }
 body {
-    overflow: hidden;
+    overflow-y: auto;
 }
 /*estilização da área de inserir os dados do simulado*/
 .inputResponses{
@@ -32,7 +32,7 @@ body {
 }
 .inputRespSimuContainer{
     width: 75%;
-    height: 75%;
+    height: auto;
     display: flex;
     flex-direction: column;
     padding: 2rem 2%;
@@ -180,5 +180,5 @@ body {
 }
 .resultIcon{
     color: #ffff;
-    
+
 }

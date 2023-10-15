@@ -97,4 +97,48 @@ let totEnem = 20
         console.log(qttEnem)
     }
 
+//parte para pegar o valor do select da edição e do dia do simulado
+//edição do simulado
+    var simuEdition = document.getElementById("simuEdition");
+    var simuEditionSelected = simuEdition.options[simuEdition.selectedIndex].value; //esse trecho mostra somente a parte que já vem selecionada por padrão no js
+
+    simuEdition.addEventListener("change", function(){
+        console.log(simuEdition.value)
+    })
+
+    //dia do simulado
+            //var simuDaySelected = simuDay.options[simuDay.selectedIndex].value;
+    let numberQuestion = 0
+        let simuSkills = []
+        let simuComp = []
+        let simuResp = []
+
+    function sendResp(){
+        const qResp = document.getElementById("questionResp")
+        const qHab = document.getElementById("hQuestion")
+        const qComp = document.getElementById("qComp")
+        //tratamento de dados das informações coletadas pelo input
+        let respValue = qResp.value;
+        let habValue = qHab.value;
+        let compValue = qComp.value;
+
+        console.log(respValue, habValue, compValue)
+        //verificação se o aluno está em natureza ou matemática
+        //a função abaixo mostra no console o valor da seleção em tempo real
+        var simuDay = document.getElementById("simuDay")
+        simuDay.addEventListener("change", function () {
+            //console.log(simuDay.value);
+            var sDSelected = simuDay.value
+            console.log(sDSelected)
+            //mudança das habilidades e conteúdos de acordo com o dia escolhido
+
+            if(sDSelected == '2dia'){
+                if()
+            }
+
+        })
+
+        }
+        sendResp()
     
+
