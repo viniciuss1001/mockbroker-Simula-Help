@@ -10,6 +10,16 @@
     font-family: "Poppins", sans-serif;
     
 }
+i{
+    margin: 1rem left;
+    color: var(--primary);
+    font-size: 16pt;
+    transition: .3s ease;
+    cursor: pointer;
+}
+i:hover{
+    color: var(--primary-D);
+}
 body {
     overflow: hidden;
 }
@@ -167,4 +177,8 @@ body {
     margin: auto;
     margin-top: 1rem;
     transition: .3s ease-in-out;
+}
+.resultIcon{
+    color: #ffff;
+    
 }

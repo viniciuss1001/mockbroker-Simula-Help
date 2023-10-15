@@ -52,20 +52,24 @@ body{
     padding: 1rem;
 }
 .corContContent .corCard{
+    background-color: var(--primary-light);
     padding: 1rem;
+    margin: 1rem;
     border-radius: 1rem;
     display: flex;
     align-items: center;
+    justify-content: space-between;
     transition: .3s ease-in-out;
-    width: fit-content;
+    width: 45%;
 }
 .corContContent .corCard img{
-    width: 50%;
+    width: 45%;
+    display: flex;
     margin: 0 auto;
     height: auto;
     transition: .3s ease-in-out;
 }
-.corLink:hover .corCard img{
+.corLink:hover img{
     transform: scale(1.1);
 }
 /*
@@ -85,6 +89,7 @@ body{
     background-color: #0bf869;
 }*/
 /*área de selecionar a edição do simulado e o dia*/
+
 #selectEdition{
     height: 100vh;
     width: 100%;
@@ -132,7 +137,7 @@ body{
     width: 45%;
     height: fit-content;
 }
-.corContainerSelect a{
+.corContainerSelect #btnContinue{
     color: #ffffff;
     display: flex;
     text-decoration: none;

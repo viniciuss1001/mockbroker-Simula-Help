@@ -5,15 +5,93 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Simula Help</title>
     <link rel="stylesheet" href="RespostsAndGab.css">
+    <link rel="stylesheet" href="pagesStyles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
+    <section class="selectCor" id="selectCor">
+        <div class="corContainer" id="corContainer">
+            <span>
+                <a href="../index.html">
+                    <i class="fa-solid fa-chevron-left"></i>
+                </a>
+            </span>
+            <h2 class="corConTitle">Selecione o simulado</h2>
+
+            <div class="corContContent" id="corContContent">
+                <div class="corCard sas" id="cardSas">
+                    <a href="#selectEdition" class="corLink" id="sas">
+                        <img src="../assets/sas.png" alt="" onclick="addSas()" id="cardSasImg">
+                    </a>
+                    <span>Simulado SAS</span>
+                </div>
+                <div class="corCard bernoulli" id="cardBernoulli">
+                    <a href="#selectEdition" class="corLink" id="bernoulli">
+                        <img src="../assets/bernoulli.png" alt="" id="bernImg" onclick="addBernoulli()">
+                    </a>
+                    <span>Simulados Bernoulli</span>
+                </div>
+                <div class="corCard poliedro" id="cardPoliedro">
+                    <a href="#selectEdition" class="corLink" id="linkPoliedro">
+                        <img src="../assets/poliedro.png" alt="" id="poliedroImg" onclick="addPoliedro()">
+                    </a>
+                    <span>Simulados Poliedro</span>
+                </div>
+                <div class="corCard somos" id="cardSomos">
+                    <a href="#selectEdition" class="corLink" id="linkSomos">
+                        <img src="../assets/somos.png" alt="" id="imgSomos" onclick="addSomos()">
+                    </a>
+                    <span>Simulados Somos</span>
+                </div>
+                <div class="corCard enem" id="cardEnem">
+                    <a href="#selectEdition" class="corLink" id="linkEnem">
+                        <img src="../assets/enemsimu.png" id="imgEnem" onclick="addEnem()">
+                    </a>
+                    <span>Provas ENEM</span>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="selectEdition">
+        <div class="corContainerSelect">
+            <span>
+                <a href="#selectCor">
+                    <i class="fa-solid fa-chevron-left"></i>
+                </a>
+            </span>
+        <h2 class="corConTitle">Selecione a edição do simulado</h2> 
+            <div class="corContContentSelect" id="corContContentSelect">
+                <div class="select">
+                    <select name="simuEdition" id="" class="simuEdition">
+                        <option value="">Selecione a edição</option>
+                        <option value="">1ª Edição</option>
+                        <option value="">2ª Edição</option>
+                        <option value="">3ª Edição</option>
+                        <option value="">4ª Edição</option>
+                        <option value="">5ª Edição</option>
+                        <option value="">6ª Edição</option>
+                    </select>
+                    <select name="daySelection" id="" class="daySelection">
+                        <option value="">Selecione o dia</option>
+                        <option value="">1º Dia</option>
+                        <option value="">2° Dia</option>
+                    </select>
+                </div>
+            </div>
+            <a href="#inputResponses" id="btnContinue">Continuar</a> 
+        </div>
+    </section>
     <section class="inputResponses" id="inputResponses">
         <!--seção para colocar o gabarito oficial do simulado-->
         <div class="inputRespSimuContainer">
+            <span>
+                <a href="#selectEdition">
+                    <i class="fa-solid fa-chevron-left"></i>
+                </a>
+            </span>
             <h2 class="respTitle">
                 Boa pedida! Vamos corrigir sua prova?
             </h2>
@@ -55,16 +133,21 @@
     </section>
     <section class="result" id="result">
         <div class="resultContainer" id="resultContainer">
+            <span>
+                <a href="#inputResponses">
+                    <i class="fa-solid fa-chevron-left"></i>
+                </a>
+            </span>''
             <h2 class="titleResult" id="titleResult">Veja abaixo seu resultado</h2>
             <div class="seeResult" id="seeResult">
                 <div class="seeTotalResult">
                     <div class="resultCor" style="background: #5EE0B6;">
                         <h4 class="totalCorrect" id="totalCorrect">Total de acertos</h4>
-                        <i class="fa-solid fa-check"></i>
+                        <i class="fa-solid fa-check resultIcon"></i>
                     </div>
                     <div class="totalErr" id="totalErr " style="background: #E0225E;">
                         <h4 class="totalError" id="totalError" >Total de erros</h4>
-                        <i class="fa-solid fa-x"></i>
+                        <i class="fa-solid fa-x resultIcon"></i>
                     </div>
                     <div class="resultRend" id="resultRend" style="background: #6AC4DE;">
                         <h3 class="totalUtil" id="totalUtil" >
@@ -77,8 +160,6 @@
                     <h4 class="habiMoreAc" id="habiMoreAc">Habildiades mais acertadas</h4>
                     <h4 class="compMoreErr" id="compMoreErr">Competências mais erradas</h4>
                     <h4 class="habiMoreErr" id="habiMoreErr">Habilidades mais erradas</h4>
-                    <h4>Conteúdo mais acertado</h4>
-                    <h4>Conteúdo mais errado</h4>
                 </div>
             </div>
             <a href="../index.html" class="btnConcluse">Concluído</a>
