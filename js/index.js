@@ -112,33 +112,55 @@ let totEnem = 20
         let simuSkills = []
         let simuComp = []
         let simuResp = []
-
-    function sendResp(){
-        const qResp = document.getElementById("questionResp")
-        const qHab = document.getElementById("hQuestion")
-        const qComp = document.getElementById("qComp")
-        //tratamento de dados das informações coletadas pelo input
-        let respValue = qResp.value;
-        let habValue = qHab.value;
-        let compValue = qComp.value;
-
-        console.log(respValue, habValue, compValue)
-        //verificação se o aluno está em natureza ou matemática
+//verificação se o aluno está em natureza ou matemática
         //a função abaixo mostra no console o valor da seleção em tempo real
         var simuDay = document.getElementById("simuDay")
         simuDay.addEventListener("change", function () {
             //console.log(simuDay.value);
-            var sDSelected = simuDay.value
+            const sDSelected = simuDay.value
             console.log(sDSelected)
-            //mudança das habilidades e conteúdos de acordo com o dia escolhido
-
-            if(sDSelected == '2dia'){
-                if()
-            }
-
         })
 
-        }
-        sendResp()
     
+    function sendResp(){
+        const qQuest = document.getElementById("questionNumb")
+        const qResp = document.getElementById("questionResp")
+        const qHab = document.getElementById("hQuestion")
+        const qComp = document.getElementById("qComp")
+        const textAlert = document.getElementById("respAlert")
+        //gabarito do enem
+        const requeriment = [
+            { regex: /[a-e]/, index: 0 }, //letra minúscula
+            { regex: /[A-E]/, index: 1 }, // letra Maiúscula
+        ]
+        
+        //tratamento de dados das informações coletadas pelo input
+        let questNumber = qQuest.value
+        var respValue = qResp.value
+        let habValue = qHab.value;
+        let compValue = qComp.value;
 
+        respValue.addEventListener("keyup", (e) => {
+            requeriment.forEach(item =>{
+                const isValid = item.regex.test(e.target.value)
+                
+                //efetuando a validação do item inserido
+                if(isValid){
+                    
+                }
+            })
+        })
+
+        console.log(questNumber, respValue, habValue, compValue)
+        
+            //checar se as respostas batem com os itens do gabarito
+
+            //verificação de resposta
+            if(respValue === resp){
+                textAlert.innerText = `Resposta aceita`
+                textAlert.style.color = `#ffff`
+            }else{
+                textAlert.innerText = `Resposta incorreta`
+                textAlert.style.color = `red`
+            }
+        }
