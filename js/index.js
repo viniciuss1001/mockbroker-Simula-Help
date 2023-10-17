@@ -104,6 +104,7 @@ let totEnem = 20
 
     simuEdition.addEventListener("change", function(){
         console.log(simuEdition.value)
+        
     })
 
     //dia do simulado
@@ -115,14 +116,24 @@ let totEnem = 20
 //verificação se o aluno está em natureza ou matemática
         //a função abaixo mostra no console o valor da seleção em tempo real
         var simuDay = document.getElementById("simuDay")
-        simuDay.addEventListener("change", function () {
+        
+        let daySelected = simuDay.addEventListener("change", function () {
             //console.log(simuDay.value);
             const sDSelected = simuDay.value
             console.log(sDSelected)
+
+            if(sDSelected == "1dia"){
+                console.log("você está no primeiro dia")
+            }else{
+                console.log("você esta no segundo dia")
+            }
+
+
         })
 
     
     function sendResp(){
+
         const qQuest = document.getElementById("questionNumb")
         const qResp = document.getElementById("questionResp")
         const qHab = document.getElementById("hQuestion")
@@ -130,37 +141,25 @@ let totEnem = 20
         const textAlert = document.getElementById("respAlert")
         //gabarito do enem
         const requeriment = [
-            { regex: /[a-e]/, index: 0 }, //letra minúscula
-            { regex: /[A-E]/, index: 1 }, // letra Maiúscula
+            "A", "B", "C", "D", "E",
+            "a", "b", "c", "d", "e"
         ]
-        
+        const gabEnem = requeriment.map((item) => item)
+        console.log(gabEnem)
         //tratamento de dados das informações coletadas pelo input
         let questNumber = qQuest.value
         var respValue = qResp.value
         let habValue = qHab.value;
         let compValue = qComp.value;
-
-        respValue.addEventListener("keyup", (e) => {
-            requeriment.forEach(item =>{
-                const isValid = item.regex.test(e.target.value)
-                
-                //efetuando a validação do item inserido
-                if(isValid){
-                    
-                }
-            })
-        })
-
-        console.log(questNumber, respValue, habValue, compValue)
-        
-            //checar se as respostas batem com os itens do gabarito
-
+        console.log(questNumber, respValue, habValue, compValue, requeriment)
             //verificação de resposta
-            if(respValue === resp){
-                textAlert.innerText = `Resposta aceita`
-                textAlert.style.color = `#ffff`
-            }else{
-                textAlert.innerText = `Resposta incorreta`
-                textAlert.style.color = `red`
-            }
+            
+
+            //verificação se está no primeiro ou segundo dia
+            const pday = "1dia"
+            const sday = '2dia'
+        if(sDSelected = pday){
+
+        }
+            
         }
